@@ -162,3 +162,11 @@ cython_debug/
 #.idea/
 database/connect_with_python/instructor
 .DS_Store
+.idea/dataSources.xml
+.idea/IBM_datascience.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/inspectionProfiles/profiles_settings.xml
+venv
+.DS_Store
