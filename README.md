@@ -1,14 +1,20 @@
 # IBM Data Science
 This repository contains hands-on completed work following the IBM Data Science professional certification on Coursera
 
-# What I learned 
 
 ## What is Data Science
-How the CRISP-DM methodology aligns with the research methods I’ve been using in the mobile computing and well-being field. The course's practical insights and real-world applications, coupled with hands-on peer-reviewed exercises, made it a truly rewarding experience.
+I leant wow the CRISP-DM methodology aligns with the research methods I’ve been using in the mobile computing and well-being field. The course's practical insights and real-world applications, coupled with hands-on peer-reviewed exercises, made it a truly rewarding experience.
 
 [Certificate of Completion](https://www.coursera.org/account/accomplishments/verify/MGUNWY77TWBN)
 
 **Skills:** CRISP-DM
+
+## Python for Data Science, AI  & Development
+Refreshed my Python knowledged in data structures such as lists, sets, dictionaries, functions Classes, using Pandas, Numpy, string manipulation, web scrapping using Pandas and BeautifulSoup.
+
+[Source](./web_scrapping/)
+
+[Certificate of Completion](https://www.coursera.org/account/accomplishments/verify/W9A5M2FFUEY5)
 
 ## Data Analysis with Python
 
