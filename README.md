@@ -17,8 +17,11 @@ Refreshed my Python knowledged in data structures such as lists, sets, dictionar
 [Certificate of Completion](https://www.coursera.org/account/accomplishments/verify/W9A5M2FFUEY5)
 
 ## Data Analysis with Python
+While I have previously used statistical regression methods, including multi-level modelling in my work on predicting depression symptom severity using behavioural data 📲 🛌 🚶‍♂️ 🤸‍♀️ passively collected via smartphones and ŌURA ring, in this course, I focused on machine learning regression techniques. I explored Linear, Multi-linear, Polynomial, and Ridge regression using Scikit-learn, Seaborn, and Pandas and gained new insights into Exploratory Data Analysis.
 
 [Source](./data_analysis/)
+[Certificate of Completion](https://www.coursera.org/account/accomplishments/verify/IBRF87JTMPFL)
+
 
 ## Databases and SQL for Data Science with Python
 I refreshed my working knowledge of SQL. 🎓💻 It was an engaging experience querying the publicly available City of Chicago crimes, socioeconomic, and schools dataset within Jupyter Notebook, with Python DB-API, pandas, SQL Magic and a focus on SQL optimization. 
