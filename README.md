@@ -3,7 +3,7 @@ This repository contains hands-on completed work following the IBM Data Science 
 
 
 ## What is Data Science
-I leant wow the CRISP-DM methodology aligns with the research methods I’ve been using in the mobile computing and well-being field. The course's practical insights and real-world applications, coupled with hands-on peer-reviewed exercises, made it a truly rewarding experience.
+I learnt wow the CRISP-DM methodology aligns with the research methods I’ve been using in the mobile computing and well-being field. The course's practical insights and real-world applications, coupled with hands-on peer-reviewed exercises, made it a truly rewarding experience.
 
 [Certificate of Completion](https://www.coursera.org/account/accomplishments/verify/MGUNWY77TWBN)
 
