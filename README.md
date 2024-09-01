@@ -35,7 +35,12 @@ I explored **Linear, Multi-linear, Polynomial, and Ridge regression using Scikit
 [Certificate of Completion](https://www.coursera.org/account/accomplishments/verify/IBRF87JTMPFL)
 
 ## Data Visualization with Python
+Data visualion is a essential part of Data Science. Here, I refreshed my skillset on visualizing data with Seaborn, Matplot lib.  I also learnt how to visualize geospatial data with folium. With folium, you can do add markers to point of interest on the map and create choropleths that colors or shaped portions of a map based on data. 
 
+[Source](./data_visualisation/) 
 
+Below is a visualisation of crimes in the San Francisco Crimes dataset. Markers are clustered together. Click a cluster expand to show the markers within the cluster. 
 ![San Fracisco Crimes data](./img/san_franscisco_crimes_data_with_grouped_markers.png)
+
+Here, we see a choropleth showing annual imigration to Canada from various countries. 
 ![Canada Immigration data](./img/canada_imigration_choropleth.png)
