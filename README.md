@@ -44,3 +44,5 @@ Below is a visualisation of crimes in the San Francisco Crimes dataset. Markers 
 
 Here, we see a choropleth showing annual imigration to Canada from various countries. 
 ![Canada Immigration data](./img/canada_imigration_choropleth.png)
+
+![Vehicle sale during recession and non recession](./img/Vehicle_sales_during_recession_and_non_recession.png)
