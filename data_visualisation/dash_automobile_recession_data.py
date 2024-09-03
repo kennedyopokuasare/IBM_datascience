@@ -34,6 +34,7 @@ app.layout = html.Div(
                 placeholder=" Select a report type",
                 value="Select Statistics",
                 style={"width": "80%", "font-size": 20, "textAlign": "center"},
+                clearable=False,
             )
         ),
         html.Br(),
@@ -65,7 +66,6 @@ app.layout = html.Div(
     Input(component_id="dropdown-statistics", component_property="value"),
 )
 def update_input_container(report_type):
-    print(report_type)
     if report_type == "yearly_statistics":
         return False
     else:
@@ -83,9 +83,10 @@ def update_container(report_type, year):
 
     if report_type == "recession_period_statistics":
         return generate_recession_period_graphs()
-    elif year is not None:
-        year_data = data[data.Year == str(year)]
+    elif year and report_type == "yearly_statistics":
+        return generate_yearly_graphs(year=year)
     else:
+        print(report_type, year)
         pass
 
 
@@ -173,6 +174,101 @@ def generate_recession_period_graphs():
             children=[
                 html.Div(children=average_vehicle_expenditure_graph),
                 html.Div(children=average_vehicle_sales_unemp_graph),
+            ],
+            style={"display": "flex"},
+        ),
+    ]
+
+
+def generate_yearly_graphs(year):
+    yearly_data = data
+    input_year = ""
+    if isinstance(year, int):
+        yearly_data = yearly_data[yearly_data.Year == int(year)]
+        input_year = int(year)
+
+    sales_per_year = (
+        yearly_data.groupby("Year")["Automobile_Sales"].mean().reset_index()
+    )
+
+    sales_per_year_graph = dcc.Graph(
+        figure=px.line(
+            sales_per_year,
+            x="Year",
+            y="Automobile_Sales",
+            labels={
+                "Year": "Year",
+                "Automobile_Sales": "Average Automobile Sales",
+            },
+            title="Average Automobile Sales per Year",
+        )
+    )
+
+    sales_per_month = (
+        yearly_data.groupby("Month", sort=False)["Automobile_Sales"].sum().reset_index()
+    )
+    sales_per_month_graph = dcc.Graph(
+        figure=px.line(
+            sales_per_month,
+            x="Month",
+            y="Automobile_Sales",
+            labels={
+                "Automobile_Sales": "Total Automobile Sales",
+            },
+            title="Total Monthly Automobile Sales",
+        )
+    )
+
+    vehicle_sales_per_year = (
+        yearly_data.groupby(
+            [
+                "Year",
+                "Vehicle_Type",
+            ]
+        )["Automobile_Sales"]
+        .mean()
+        .reset_index()
+    )
+    vehicle_sales_per_year_graph = dcc.Graph(
+        figure=px.bar(
+            vehicle_sales_per_year,
+            x="Year",
+            y="Automobile_Sales",
+            color="Vehicle_Type",
+            labels={
+                "Vehicle_Type": "Vehicle Type",
+                "Automobile_Sales": "Average Automobile Sales",
+            },
+            title=f"Average Vehicles Sold by Vehicle Type in the year {input_year}",
+        )
+    )
+
+    add_expenditure = (
+        yearly_data.groupby("Vehicle_Type")["Advertising_Expenditure"]
+        .sum()
+        .reset_index()
+    )
+    add_expenditurer_graph = dcc.Graph(
+        figure=px.pie(
+            values=add_expenditure.Advertising_Expenditure,
+            names=add_expenditure.Vehicle_Type,
+            title="Total Advertisment Expenditure for Each Vehicle",
+        )
+    )
+    return [
+        html.Div(
+            className="chart-item",
+            children=[
+                html.Div(children=sales_per_year_graph),
+                html.Div(children=sales_per_month_graph),
+            ],
+            style={"display": "flex"},
+        ),
+        html.Div(
+            className="chart-item",
+            children=[
+                html.Div(children=vehicle_sales_per_year_graph),
+                html.Div(children=add_expenditurer_graph),
             ],
             style={"display": "flex"},
         ),

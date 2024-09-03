@@ -18,6 +18,10 @@ I refreshed my working knowledge of SQL. 🎓💻 It was an engaging experience 
 
 Revisiting stored procedures and ACID transactions, brought back a wave of nostalgia from 2012 ⏳ when I was involved in developing the Attendance Management System at Students Loan Trust Fund Ghana 🇬🇭. This reflection led me to read about the evolving role of stored procedures in modern data-driven production systems, weighing their pros and cons, and considering aspects like application testability and the separation of data and business logic.
 
+![Loading and saving to db table with pandas](./img/load_data_and_save_to_db_table.png)
+
+![SQL query with sub query](./img/sql_query_in_jupyter.png)
+
 [Source](./database/)
 
 [Certificate of Completion](https://www.coursera.org/account/accomplishments/verify/FXN2LMYKS0BH)
