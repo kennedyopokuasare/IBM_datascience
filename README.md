@@ -59,3 +59,34 @@ Here, we see a choropleth showing annual imigration to Canada from various count
 
 This plot visualizes Autombile sales per vehicle type in the United States during recession and non recession periods. 
 ![Vehicle sale during recession and non recession](./img/Vehicle_sales_during_recession_and_non_recession.png)
+
+
+## Machine Learning with Python
+
+I refreshed my working knowledge in Machining Learning. In my [previous scientific research work](https://www.sciencedirect.com/science/article/pii/S1574119222000566), I leveraged an ensemble of classifiers to predict the depression status of participants using behavioural data 📲 🛌 🚶‍♂️ 🤸‍♀️ passively collected via smartphones and ŌURA ring. In this course, **I revisited the theoretical aspects of Regression, Classification and Clustering**.  Does on need efficient car engines, drive smaller engine size cars or switch to EV to reduce CO2 emissions ? Those were the question that led my curiosity in analysing Fuel consumption and C02 emission data publicly available from the Canadian Open Government portal.  With 9 out of 12 courses completed, I am inching closer to the final goal of obtaining the IBM Data Science Professional certificate.  Next up is an Applied Machine Learning capstone project. 
+
+[Source](./machine_learning/) 
+
+[Certificate of completion](https://coursera.org/share/762a19f6e96c3d2901423646bfabee84)
+
+```python
+
+sns.histplot(x=df.Co2_Emissions)
+plt.axvline(df.Co2_Emissions.mean(), color="b", linestyle="dashed", label="Mean")
+plt.axvline(df.Co2_Emissions.median(), color="r", linestyle="dashed", label="Median")
+plt.xlabel("Co2 Emissions")
+plt.legend()
+plt.show()
+
+```
+The Distribution of C02 emissions is more closer to a normal distribution, given that the mean and median are almost equal. Are there any outliers ?
+![Distribution of Co2 Emissions](./img/fuel_consumption_distro.png)
+
+
+Distribution plot of true and predicted CO2 Emissions. The model makes higher errors in predicting Co2 Emisisons in ranges 200-300. More dataset in these might improve the performance. Examining the residual plot
+
+
+![Distribution plot of true and predicted CO2 Emissions](./img/distribution_plot_true_pred_co2_emission.png)
+
+A residual plot for the prediction of Co2 Emissions. The residual plots shows a very that Multiple Linear Regression is not best estimator given the feature set. There is a pattern in the residual plots 
+![](./img/co2-emission_residual_plot.png)
