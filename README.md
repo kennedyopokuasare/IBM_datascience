@@ -1,5 +1,6 @@
 # IBM Data Science
-This repository contains hands-on completed work following the IBM Data Science professional certification on Coursera
+
+This repository contains hands-on completed work following the IBM Data Science professional certification on Coursera. 
 
 ## What is Data Science
 I learnt how the CRISP-DM methodology aligns with the research methods I’ve been using in the mobile computing and well-being field. The course's practical insights and real-world applications, coupled with hands-on peer-reviewed exercises, made it a truly rewarding experience.
@@ -7,7 +8,7 @@ I learnt how the CRISP-DM methodology aligns with the research methods I’ve be
 [Certificate of Completion](https://www.coursera.org/account/accomplishments/verify/MGUNWY77TWBN)
 
 ## Python for Data Science, AI  & Development
-I refreshed my Python knowledge in data structures such as lists, sets, dictionaries, functions Classes, using Pandas, Numpy, string manipulation, web scrapping using Pandas and BeautifulSoup.
+I refreshed my Python knowledge in data structures such as **lists, sets, dictionaries, functions classes, using Pandas, Numpy, string manipulation, web scrapping using Pandas and BeautifulSoup**.
 
 [Source](./web_scrapping/)
 
@@ -17,6 +18,8 @@ I refreshed my Python knowledge in data structures such as lists, sets, dictiona
 I refreshed my working knowledge of SQL. 🎓💻 It was an engaging experience querying the publicly available City of Chicago crimes, socioeconomic, and schools dataset within Jupyter Notebook, **with Python DB-API, pandas, SQL Magic and a focus on SQL optimization**. 
 
 Revisiting stored procedures and ACID transactions, brought back a wave of nostalgia from 2012 ⏳ when I was involved in developing the Attendance Management System at Students Loan Trust Fund Ghana 🇬🇭. This reflection led me to read about the evolving role of stored procedures in modern data-driven production systems, weighing their pros and cons, and considering aspects like application testability and the separation of data and business logic.
+
+Pandas can be used to load data and saved directly into an SQL database table over a database connection. Here we use SQlite as a test database. With SQL Magic, the database can be queried directly from a jupyter notebook, as shown in the screenshot below. 
 
 ![Loading and saving to db table with pandas](./img/load_data_and_save_to_db_table.png)
 
@@ -36,7 +39,8 @@ I explored **Linear, Multi-linear, Polynomial, and Ridge regression using Scikit
 
 [Certificate of Completion](https://www.coursera.org/account/accomplishments/verify/IBRF87JTMPFL)
 
-This plot shows a heatmap of the correlation matrix between various features of the Houses.
+This plot shows a heatmap of the correlation matrix between various features of the Houses. There is a high corelation between house `prices` and `grade (0.67)`, `number of bathrooms (bathroom, 0.53)`, `square feet of living area (sqrt_living, 0.7)`. There are also notable multicolinearity between sevaral of the features, for instance between square feet above and square feet of living area. Here we consider only pairwise correlations, therefore statistical significance of the correlations have not been computed i.e, the p-values are not determined or adjusted or multiple testing. 
+
 
 ![House price correlation matrix](./img/house_price_correlation%20matrix.png)
 
@@ -54,10 +58,12 @@ During the course, I explored and visualized interesting real-world datasets, su
 Below is a visualisation of crimes in the San Francisco Crimes dataset. Markers are clustered together. Click a cluster expand to show the markers within the cluster. 
 ![San Fracisco Crimes data](./img/san_franscisco_crimes_data_with_grouped_markers.png)
 
-Here, we see a choropleth showing annual imigration to Canada from various countries. 
+Here, we see a choropleth showing annual imigration to Canada from various countries. The top countries with immigration to Canada are China and India. The black coloured countries do not have any imigration data, or the countries names in the GeoJSON and the dataset do not match. Folium can also configured to show a specified colour when data is not available. 
+
 ![Canada Immigration data](./img/canada_imigration_choropleth.png)
 
-This plot visualizes Autombile sales per vehicle type in the United States during recession and non recession periods. 
+This plot visualizes Autombile sales per vehicle type in the United States during recession and non recession periods. During non recession periods, car sales are generally high, with sports and esecutive cars having the highest sales. The car sales drastically declines during recession periods with sports cars saled being the most affected. 
+
 ![Vehicle sale during recession and non recession](./img/Vehicle_sales_during_recession_and_non_recession.png)
 
 
