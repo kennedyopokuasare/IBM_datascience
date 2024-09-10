@@ -45,7 +45,6 @@ This plot shows a heatmap of the correlation matrix between various features of 
 ![House price correlation matrix](./img/house_price_correlation%20matrix.png)
 
 
-
 ## Data Visualization with Python
 As Data visualion is a essential part of Data Science, I advanced my working knowledge in Data Visualization with Python through this course. I have previously developed data analysis and compliance dashboards using R Shiny, and conducted exploratory data analysis of smartphone and wearable datasets with ggplot2 in R. In this coourse, **I enhanced my skills in Python, using tools like Folium for geospatial data visualization (clustered markers, choropleth maps), Matplotlib, Seaborn, Pandas, and building dashboards with Plotly Dash**.
 
@@ -96,3 +95,18 @@ Distribution plot of true and predicted CO2 Emissions. The model makes higher er
 
 A residual plot for the prediction of Co2 Emissions. The residual plots shows a very that Multiple Linear Regression is not best estimator given the feature set. There is a pattern in the residual plots 
 ![](./img/co2-emission_residual_plot.png)
+
+
+## Applied Data Science Capstone Project
+In this capstone, we predict if the Falcon 9 first stage will land successfully. A Falcon 9 launch costs SpaceX 62 million dollars, while it costs other providers upward of 165 million dollars. Predicting if the first stage of Falco 9 will land succesfully can determine the cost of a launch. 
+
+**References:**
+[Space X launches](https://www.spacex.com/launches/)
+[Wiki List of Falcon 9 and Falcon Heavy launches](https://en.wikipedia.org/wiki/List_of_Falcon_9_and_Falcon_Heavy_launches)
+
+### Data collection 
+The data was collected using an (unofficial) [SpaceX API](https://github.com/r-spacex/SpaceX-API/tree/master) and WebScapping With Beautiful Soup 
+
+[Source](./captone_project/)
+
+
