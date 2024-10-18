@@ -110,3 +110,14 @@ The data was collected using an (unofficial) [SpaceX API](https://github.com/r-s
 [Source](./captone_project/)
 
 
+
+
+## Generative AI
+
+Data generation and augmentation with ChatGPT with prompts based on domain knowledge and CTGAN (python SDK) create additonal synthetic data that was comparable to the original GPT generated data. 
+
+ChatCSV
+
+## More reading more: 
+- IntepretML : https://interpret.ml/
+- FairLearn: https://fairlearn.org/
