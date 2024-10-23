@@ -56,10 +56,9 @@ app.layout = html.Div(
     ]
 )
 
+
 # TASK 2:
 # Add a callback function for `site-dropdown` as input, `success-pie-chart` as output
-
-
 @callback(
     Output(component_id="success-pie-chart", component_property="figure"),
     Input(component_id="site-dropdown", component_property="value"),
@@ -73,28 +72,27 @@ def update_pie_chart(site):
     Returns:
         plotly.graph_objs._figure.Figure: A pie chart figure object.
     """
-
-    fig = px.pie(
-        spacex_df.groupby("Launch Site")["class"].sum().reset_index(),
-        values="class",
-        names="Launch Site",
-        title="Total Success Launches By Site",
-    )
+    filtered_df = spacex_df.groupby("Launch Site")["class"].sum().reset_index()
+    title = "Total Success Launches By Site"
+    values = "class"
+    names = "Launch Site"
 
     if site:
-        print(site)
         filtered_df = spacex_df[spacex_df["Launch Site"] == site]
         filtered_df = filtered_df.groupby("class", as_index=False).agg(
             count=("class", "count")
         )
         filtered_df["class"] = filtered_df["class"].map({0: "Failure", 1: "Success"})
+        title = "Total Success and Failure for Launches Site " + site
+        values = "count"
+        names = "class"
 
-        fig = px.pie(
-            filtered_df,
-            values="count",
-            names="class",
-            title="Total Success and Failure for Launches Site " + site,
-        )
+    fig = px.pie(
+        filtered_df,
+        values=values,
+        names=names,
+        title=title,
+    )
 
     fig.update_layout()
     return fig
@@ -102,6 +100,52 @@ def update_pie_chart(site):
 
 # TASK 4:
 # Add a callback function for `site-dropdown` and `payload-slider` as inputs, `success-payload-scatter-chart` as output
+@callback(
+    Output(component_id="success-payload-scatter-chart", component_property="figure"),
+    Input(component_id="site-dropdown", component_property="value"),
+    Input(component_id="payload-slider", component_property="value"),
+)
+def update_scatter_chart(site, payload):
+    """Update the scatter chart based on the selected launch site and payload range.
+
+    Args:
+        site (str): The launch site selected from the dropdown.
+        payload (list): The payload range selected from the slider.
+
+    Returns:
+        plotly.graph_objs._figure.Figure: A scatter chart figure object.
+    """
+    filtered_df = spacex_df
+    title = "Correlation between Payload and Success for All Sites"
+    if site:
+        filtered_df = spacex_df[spacex_df["Launch Site"] == site]
+        title = "Correlation between Payload and Success for " + site
+    if payload:
+        filtered_df = filtered_df[
+            (filtered_df["Payload Mass (kg)"] >= payload[0])
+            & (filtered_df["Payload Mass (kg)"] <= payload[1])
+        ]
+        site = f" for {site}" if site else ""
+        title = (
+            "Correlation between Payload and Success"
+            + site
+            + " with payload between "
+            + str(payload[0])
+            + " and "
+            + str(payload[1])
+            + " Kg"
+        )
+
+    fig = px.scatter(
+        filtered_df,
+        x="Payload Mass (kg)",
+        y="class",
+        color="Booster Version Category",
+        title=title,
+    )
+
+    return fig
+
 
 # %%
 # Run the app
