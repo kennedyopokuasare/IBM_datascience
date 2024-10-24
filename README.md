@@ -3,11 +3,13 @@
 This repository contains hands-on completed work following the IBM Data Science professional certification on Coursera. 
 
 ## What is Data Science
+
 I learnt how the CRISP-DM methodology aligns with the research methods I’ve been using in the mobile computing and well-being field. The course's practical insights and real-world applications, coupled with hands-on peer-reviewed exercises, made it a truly rewarding experience.
 
 [Certificate of Completion](https://www.coursera.org/account/accomplishments/verify/MGUNWY77TWBN)
 
 ## Python for Data Science, AI  & Development
+
 I refreshed my Python knowledge in data structures such as **lists, sets, dictionaries, functions classes, using Pandas, Numpy, string manipulation, web scrapping using Pandas and BeautifulSoup**.
 
 [Source](./web_scrapping/)
@@ -15,6 +17,7 @@ I refreshed my Python knowledge in data structures such as **lists, sets, dictio
 [Certificate of Completion](https://www.coursera.org/account/accomplishments/verify/W9A5M2FFUEY5)
 
 ## Databases and SQL for Data Science with Python
+
 I refreshed my working knowledge of SQL. 🎓💻 It was an engaging experience querying the publicly available City of Chicago crimes, socioeconomic, and schools dataset within Jupyter Notebook, **with Python DB-API, pandas, SQL Magic and a focus on SQL optimization**. 
 
 Revisiting stored procedures and ACID transactions, brought back a wave of nostalgia from 2012 ⏳ when I was involved in developing the Attendance Management System at Students Loan Trust Fund Ghana 🇬🇭. This reflection led me to read about the evolving role of stored procedures in modern data-driven production systems, weighing their pros and cons, and considering aspects like application testability and the separation of data and business logic.
@@ -31,6 +34,7 @@ Pandas can be used to load data and saved directly into an SQL database table ov
 
 
 ## Data Analysis with Python
+
 While I have previously used statistical regression methods, including multi-level modelling in my work on predicting depression symptom severity using behavioural data 📲 🛌 🚶‍♂️ 🤸‍♀️ passively collected via smartphones and ŌURA ring [[1](https://www.sciencedirect.com/science/article/pii/S1574119222000566), [2](https://www.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.2021.625247/full)], in this course, I focused on machine learning regression techniques. 
 
 I explored **Linear, Multi-linear, Polynomial, and Ridge regression using Scikit-learn, Seaborn, and Pandas and gained new insights into Exploratory Data Analysis**.
@@ -46,6 +50,7 @@ This plot shows a heatmap of the correlation matrix between various features of 
 
 
 ## Data Visualization with Python
+
 As Data visualion is a essential part of Data Science, I advanced my working knowledge in Data Visualization with Python through this course. I have previously developed data analysis and compliance dashboards using R Shiny, and conducted exploratory data analysis of smartphone and wearable datasets with ggplot2 in R. In this coourse, **I enhanced my skills in Python, using tools like Folium for geospatial data visualization (clustered markers, choropleth maps), Matplotlib, Seaborn, Pandas, and building dashboards with Plotly Dash**.
 
 During the course, I explored and visualized interesting real-world datasets, such as the United Nations Population data on immigration to Canada, the Australian wildfire dataset, and the United States  automobile sales during recession and non-recession periods. I also deepened my understanding of the Python Data Visualization ecosystem, comparing tools like Streamlit, Plotly Dash, and Panel in terms of production readiness, ease of development and integration with other plotting libraries.
@@ -94,29 +99,40 @@ Distribution plot of true and predicted CO2 Emissions. The model makes higher er
 ![Distribution plot of true and predicted CO2 Emissions](./img/distribution_plot_true_pred_co2_emission.png)
 
 A residual plot for the prediction of Co2 Emissions. The residual plots shows a very that Multiple Linear Regression is not best estimator given the feature set. There is a pattern in the residual plots 
-![](./img/co2-emission_residual_plot.png)
+![co2 emmision residual](./img/co2-emission_residual_plot.png)
 
 
 ## Applied Data Science Capstone Project
+
 In this capstone, we predict if the Falcon 9 first stage will land successfully. A Falcon 9 launch costs SpaceX 62 million dollars, while it costs other providers upward of 165 million dollars. Predicting if the first stage of Falco 9 will land succesfully can determine the cost of a launch. 
 
-**References:**
-[Space X launches](https://www.spacex.com/launches/)
-[Wiki List of Falcon 9 and Falcon Heavy launches](https://en.wikipedia.org/wiki/List_of_Falcon_9_and_Falcon_Heavy_launches)
+Key findings of the project included:
 
-### Data collection 
-The data was collected using an (unofficial) [SpaceX API](https://github.com/r-spacex/SpaceX-API/tree/master) and WebScapping With Beautiful Soup 
+* Increased Landing Success Over Time: There has been a notable improvement in successful landings in recent years, especially from launch sites CCAFS SLC 40 and KSC LC 39A.
 
-[Source](./captone_project/)
+* Influence of Target Orbits: Missions to orbits such as ES-L1, GEO, HEO, and SSO exhibited higher landing success rates. In contrast, missions targeting GTO and SO faced more challenges.
 
+* Predictive Modeling: A machine learning model was developed, achieving an 83% accuracy rate in predicting successful landings. Nonetheless, there is potential to enhance the model's performance, particularly in reducing false positive predictions.
 
+See the [Full PDF Report of the project](./captone_project/final_report/spacex-capstone-report.pdf) and [Source code](./captone_project/)
 
 
 ## Generative AI
 
-Data generation and augmentation with ChatGPT with prompts based on domain knowledge and CTGAN (python SDK) create additonal synthetic data that was comparable to the original GPT generated data. 
+In this course, I explored how to use generative AI to augment the full lifecyle of the Data Science systems, for instance applying generative AI techniques in the development and refinement of machine learning models. I explored data generation and augmentation using generative AI tools like ChatGPT. I utilized ChatGPT to generate and label [data](./generative_ai/digital_phenotyping_data_gpt_labeled.csv) with prompts based on domain knowledge. The CTGAN Python SDK was employed to create additional [synthetic data](./generative_ai/generating_synthetic_data.ipynb) that was comparable to the original GPT-generated data.
 
-ChatCSV
+
+Below are example promts and responses used to generate the data. 
+
+![prompt 1](./generative_ai/1.%20gpt_prompt_1.png)
+![prompt 2](./generative_ai/2.%20gpt_prompt_2.png)
+![prompt 3](./generative_ai/3.%20gpt_prompt_3.png)
+![prompt 4](./generative_ai/4.%20gpt_prompt_4.png)
+![prompt 4](./generative_ai/5.%20gpt_prompt_5.png)
+
+[Source](./generative_ai/)
+
+[Certificate of completion](https://www.coursera.org/account/accomplishments/verify/UOJDJ8UL7T04)
 
 ## More reading more: 
 - IntepretML : https://interpret.ml/
